@@ -28,3 +28,21 @@ button {
     padding: 0.5em 1em;
     font-size: 2rem;
 }
+
+form {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-size: 3rem;
+}
+
+form > button {
+    background-color: red;
+}
+form > button:last-child {
+    background-color: yellow;
+}
+form > div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+}
