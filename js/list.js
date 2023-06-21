@@ -1,3 +1,7 @@
+import { renderHeader } from "./header.js";
+
+renderHeader(false);
+
 const goods = [
     { name: 'Morka', price: 1, },
     { name: 'Kopustas', price: 1.5, },

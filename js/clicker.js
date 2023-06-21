@@ -1,3 +1,7 @@
+import { renderHeader } from "./header.js";
+
+renderHeader(false);
+
 console.clear();
 
 const formDOM = document.querySelector('form');
