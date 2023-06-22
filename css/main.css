@@ -35,12 +35,13 @@ button {
 
 form {
     display: flex;
+    max-width: 90vw;
     gap: 2rem;
     align-items: center;
-    font-size: 3rem;
 }
 
 form > button {
+    width: auto;
     background-color: red;
 }
 form > button:last-child {
@@ -49,4 +50,30 @@ form > button:last-child {
 form > div {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: blue;
+}
+
+form > input {
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    width: 75vmin;
+    height: 75vmin;
+    outline: 10px solid #ccc;
+}
+.board > .row {
+    display: flex;
+    height: 100%;
+}
+.board > .row > .cell {
+    width: 100%;
+    background-color: #f8f8f8;
+    outline: 1px solid red;
+}
+.board > .row > .cell.black {
+    background-color: #333;
 }
