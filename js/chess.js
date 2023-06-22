@@ -16,30 +16,17 @@ formDOM.addEventListener('submit', (event) => {
 });
 
 function renderChessBoard(size = 8) {
+    let blackHTML = '';
+    let whiteHTML = '';
     let HTML = '';
 
+    for (let m = 0; m < size; m++) {
+        blackHTML += `<div class="cell ${m % 2 === 0 ? 'black' : ''}"></div>`;
+        whiteHTML += `<div class="cell ${m % 2 === 0 ? '' : 'black'}"></div>`;
+    }
+
     for (let i = 0; i < size; i++) {
-        if (i % 2 === 0) {
-            HTML += '<div class="row">';
-            for (let j = 0; j < size; j++) {
-                if (j % 2 === 0) {
-                    HTML += '<div class="cell black"></div>';
-                } else {
-                    HTML += '<div class="cell"></div>';
-                }
-            }
-            HTML += '</div>';
-        } else {
-            HTML += '<div class="row">';
-            for (let j = 0; j < size; j++) {
-                if (j % 2 === 0) {
-                    HTML += '<div class="cell"></div>';
-                } else {
-                    HTML += '<div class="cell black"></div>';
-                }
-            }
-            HTML += '</div>';
-        }
+        HTML += `<div class="row">${i % 2 === 0 ? blackHTML : whiteHTML}</div>`
     }
 
     boardDOM.innerHTML = HTML;

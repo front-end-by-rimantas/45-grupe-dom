@@ -72,7 +72,7 @@ form > input {
 .board > .row > .cell {
     width: 100%;
     background-color: #f8f8f8;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 .board > .row > .cell.black {
     background-color: #333;
